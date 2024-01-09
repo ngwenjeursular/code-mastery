@@ -44,7 +44,8 @@ I'll document my week-long journey to master the concept of bit manipulation in 
 - **Afternoon:**
   - Explored more complex logical operations with bitwise operators.
   - Shared progress on Twitter
-
+use this to compile your code:
+`gcc -Wall -Wextra -Werror -pedantic practice_file_1.c main.c -o 1-practice`
 
 ## Twitter Updates
 
