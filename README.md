@@ -47,6 +47,19 @@ I'll document my week-long journey to master the concept of bit manipulation in 
 use this to compile your code:
 `gcc -Wall -Wextra -Werror -pedantic practice_file_1.c main.c -o 1-practice`
 
+## Day 3: Bitwise Shifts and Rotations
+
+(10/01/2024)
+- **Morning:**
+  - Explored left and right shifts, understanding their significance.
+  - Implemented bitwise rotations to the left and right.
+- **Afternoon:**
+  - Extended algorithms to perform circular shifts using bitwise rotation.
+  - Applied rotations in coding challenges to reinforce the concept.
+
+use this to compile your code:
+`gcc -Wall -Wextra -Werror -pedantic practice_file_1.c practice_file_2.c main.c -o 2-practice`
+
 ## Twitter Updates
 
 Follow my journey on Twitter [@grey_jacki3](https://x.com/grey_jacki3?t=ERZ2TKae4lhBI_4l8c8b5Q&s=09) and join the conversation using the hashtags #CodeMasteryChallenge #31daysofdiscipline #CProgramming #BitManipulation.

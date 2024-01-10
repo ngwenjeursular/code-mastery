@@ -13,6 +13,8 @@ int main(void)
 	time_t currentTime;
 	struct tm *localTime; /*get current time*/
 	int hours, minutes, seconds;
+	int leftRotate_result, i, leftmostOnePosition = 31;
+	unsigned int rightRotate_result, inputData, hashValue, gpioConfig;
 
 	left_bitwise_shift();
 	right_bitwise_shift();
@@ -79,8 +81,67 @@ int main(void)
 	
 	/*Display the binary clock*/
 	displayBinaryClock(hours, minutes, seconds); /*find this function defined in practice_file_1.c*/
+	
+	/*Bitwise rotation*/	
+	leftRotate_result  = leftRotate(0xD5, 2);
 
+	while (!((leftRotate_result >> leftmostOnePosition) & 1) && leftmostOnePosition > 0)
+	{
+		leftmostOnePosition--;
+	}
+	for (i = leftmostOnePosition; i >= 0; --i)
+		printf("%d", (leftRotate_result >> i) & 1);
+	printf("\n");
 
+	/*Right bitwise rotation*/
+	rightRotate_result = rightRotate(0xD5, 2);
+
+	while (!((rightRotate_result >> leftmostOnePosition) & 1) && leftmostOnePosition)
+	{
+
+        	leftmostOnePosition--;
+	}
+
+	/* Print the result in binary without leading zeros */
+	for (i = leftmostOnePosition; i >= 0; --i)
+		printf("%d", (rightRotate_result >> i) & 1);
+	printf("\n");
+
+	/*Hashing Function*/
+	inputData = 0xD6;
+
+	/*printf("%d", (hashValue >> i) & 1);*/
+	hashValue = hashFunction(inputData);
+
+	/*Print the original input and the resulting hash*/
+	printf("Original Input: ");
+	for (i = sizeof(inputData) * 8 - 1; i >= 0; --i)
+		printf("%d", (inputData >> i) & 1);
+
+	printf("\nHash Value:      ");
+	for (i = sizeof(hashValue) * 8 - 1; i >= 0; --i)
+		printf("%d", (hashValue >> i) & 1);
+
+	printf("\n");
+
+	/*let's say for e.g we have a microcontroller with a GPIO configuration
+	 *  register where each bit represents the configuration of a specific pin.
+	 *  We want to configure Pin 3 as an output. We'll use right bitwise rotation
+	 */
+	/*GPIO stands for: General-Purpose Input/Output (GPIO) */
+
+	/*Initial GPIO configuration register*/
+	gpioConfig = 0x00;
+
+	/*Display the initial configuration*/
+	printf("Initial GPIO Configuration: %08X\n", gpioConfig);
+
+	/*Configure Pin 3 as an output*/
+	gpioConfig = configurePinAsOutput(gpioConfig, 3);
+
+	/*Display the updated configuration*/
+	printf("Updated GPIO Configuration: %08X\n", gpioConfig);
+	
 	return (0);
 
 

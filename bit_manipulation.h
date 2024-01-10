@@ -18,5 +18,9 @@ void left_bitwise_shift(void);
 void right_bitwise_shift(void);
 
 void displayBinaryClock(int hours, int minutes, int seconds);
+unsigned int leftRotate(unsigned int value, int n);
+unsigned int rightRotate(unsigned int value, int n);
+unsigned int hashFunction(unsigned int key);
+unsigned int configurePinAsOutput(unsigned int configRegister, int pinNumber);
 
 #endif /*BIT_MANIPULATION_H*/
