@@ -47,7 +47,7 @@ I'll document my week-long journey to master the concept of bit manipulation in 
 use this to compile your code:
 `gcc -Wall -Wextra -Werror -pedantic practice_file_1.c main.c -o 1-practice`
 
-## Day 3: Bitwise Shifts and Rotations
+## Day 7: Bitwise Shifts and Rotations
 
 (10/01/2024)
 - **Morning:**
