@@ -18,6 +18,7 @@ int main(void)
 	int num_one = 5, num_two = 10;
 	unsigned int num_1 = 0,  num_2 = 12,  num_3 = 128;
 	unsigned int no_1 = 0, no_2 = 12, no_3 = 128;
+	unsigned int userPermissions = 0;
 	
 	/*Set*/
     	printf("Original number: %d (Binary: ", num);
@@ -88,7 +89,25 @@ int main(void)
 	printf("Lowest set bit position of %d: %d\n", no_1, extractLowestSetBit(no_1));
     	printf("Lowest set bit position of %d: %d\n", no_2, extractLowestSetBit(no_2));
     	printf("Lowest set bit position of %d: %d\n", no_3, extractLowestSetBit(no_3));
+	
+	/*Grant read and write permissions to the user*/
+	grantPermission(&userPermissions, READ_PERMISSION);
+    	grantPermission(&userPermissions, WRITE_PERMISSION);
 
+	/*Check if the user has execute permission*/
+	if (hasPermission(userPermissions, EXECUTE_PERMISSION))
+		printf("User has execute permission.\n");
+	else
+		printf("User does not have execute permission.\n");
+
+	/*Revoke write permission from the user*/
+	revokePermission(&userPermissions, WRITE_PERMISSION);
+
+	/*Check if the user has write permission after revocation*/
+	if (hasPermission(userPermissions, WRITE_PERMISSION))
+		printf("User still has write permission.\n");
+	else
+		printf("User no longer has write permission.\n");
 
     	return (0);
 }

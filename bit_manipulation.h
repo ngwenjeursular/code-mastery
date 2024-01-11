@@ -32,5 +32,8 @@ int isPowerOfTwo(unsigned int num);
 void swapWithoutTemp(int *a, int *b);
 int findMSBPosition(unsigned int num);
 int extractLowestSetBit(unsigned int num);
+int hasPermission(unsigned int userPermissions, unsigned int permissionToCheck);
+void grantPermission(unsigned int *userPermissions, unsigned int permissionToAdd);
+void revokePermission(unsigned int *userPermissions, unsigned int permissionToRemove);
 
 #endif /*BIT_MANIPULATION_H*/

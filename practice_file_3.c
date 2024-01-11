@@ -203,3 +203,36 @@ int extractLowestSetBit(unsigned int num)
 
     	return (-1); /*Should not reach here*/
 }
+
+/*I'm going to create a simple example that applies some bitwise tricks in the real world.
+ * I'll simulate a system where users have different permissions, and
+ * I'll use bitwise operations to manage and check those permissions efficiently.
+ */
+
+/*Function to check if a user has a specific permission*/
+int hasPermission(unsigned int userPermissions, unsigned int permissionToCheck)
+{
+    	return ((userPermissions & permissionToCheck) != 0);
+}
+
+/*Function to grant a permission to a user*/
+/**
+ * grantPermission - Grant a permission to a user.
+ * @userPermissions: Pointer to the permissions of the user.
+ * @permissionToAdd: The permission to add.
+ */
+void grantPermission(unsigned int* userPermissions, unsigned int permissionToAdd)
+{
+    	*userPermissions |= permissionToAdd;
+}
+
+/*Function to revoke a permission from a user*/
+/**
+ * revokePermission - Revoke a permission from a user.
+ * @userPermissions: Pointer to the permissions of the user.
+ * @permissionToRemove: The permission to remove.
+ */
+void revokePermission(unsigned int *userPermissions, unsigned int permissionToRemove)
+{
+     	*userPermissions &= ~permissionToRemove;
+}
