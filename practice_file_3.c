@@ -123,3 +123,83 @@ int countSetBits(unsigned int num)
 
     	return (count);
 }
+
+/**
+ * isPowerOfTwo - Check if a number is a power of two.
+ * @num: The number to be checked.
+ *
+ * Return: 1 if the number is a power of two, 0 otherwise.
+ */
+int isPowerOfTwo(unsigned int num)
+{
+    	/* A power of two has exactly one bit set to 1 */
+    	return ((num != 0) && ((num & (num - 1)) == 0));
+}
+
+/**
+ * swapWithoutTemp - Swap two values without using a temporary variable.
+ * @a: Pointer to the first value.
+ * @b: Pointer to the second value.
+ */
+void swapWithoutTemp(int *a, int *b)
+{
+     	*a = *a ^ *b;
+    	*b = *a ^ *b;
+    	*a = *a ^ *b;
+}
+
+/**
+ * findMSBPosition - Find the position of the most significant bit.
+ * @num: The number to be analyzed.
+ *
+ * Return: The position of the most significant bit, or -1 if no bit is set.
+ */
+int findMSBPosition(unsigned int num)
+{
+	int position, i;
+
+    	if (num == 0)
+        	return -1; /* No bit is set*/
+
+    	position = 0;
+
+    	/* Iterate over each bit position from left to right*/
+    	for (i = sizeof(num) * 8 - 1; i >= 0; --i)
+	{
+        /*Check if the current bit is set*/
+        	if ((num >> i) & 1)
+        	{
+           	 position = i;
+            	break;
+        	}
+    	}
+
+    	return (position);
+}
+
+/**
+ * extractLowestSetBit - Extract the position of the lowest set bit.
+ * @num: The number to be analyzed.
+ *
+ * Return: The position of the lowest set bit, or -1 if no bit is set.
+ */
+int extractLowestSetBit(unsigned int num)
+{
+	int position;
+	unsigned int i;
+
+    	if (num == 0)
+        	return -1; /* No bit is set*/
+
+    	/*Use bitwise AND with the two's complement to isolate the rightmost set bit*/
+    	position = (num & -num);
+
+    	/*Find the position of the rightmost set bit*/
+    	for (i = 0; i < sizeof(num) * 8; ++i)
+	{
+        	if ((position >> i) & 1)
+            	return (i);
+    	}
+
+    	return (-1); /*Should not reach here*/
+}

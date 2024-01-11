@@ -28,5 +28,9 @@ unsigned int clearBit(unsigned int num, int pos);
 unsigned int toggleBit(unsigned int num, int pos);
 int isBitSet(unsigned int num, int pos);
 int countSetBits(unsigned int num);
+int isPowerOfTwo(unsigned int num);
+void swapWithoutTemp(int *a, int *b);
+int findMSBPosition(unsigned int num);
+int extractLowestSetBit(unsigned int num);
 
 #endif /*BIT_MANIPULATION_H*/

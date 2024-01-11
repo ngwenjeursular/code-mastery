@@ -14,6 +14,10 @@ int main(void)
 	unsigned int result_toggle = toggleBit(num, 2);
 	int isSet = isBitSet(num, 2);
 	int setBitsCount = countSetBits(num);
+	unsigned int num1 = 16, num2 = 12, num3 = 1;
+	int num_one = 5, num_two = 10;
+	unsigned int num_1 = 0,  num_2 = 12,  num_3 = 128;
+	unsigned int no_1 = 0, no_2 = 12, no_3 = 128;
 	
 	/*Set*/
     	printf("Original number: %d (Binary: ", num);
@@ -59,6 +63,31 @@ int main(void)
     	printf(")\n");
 
     	printf("Number of set bits: %d\n", setBitsCount);
+	printf("\n");
+	/*check if a number is a power of two*/
+	printf("%d is %s power of two.\n", num1, isPowerOfTwo(num1) ? "a" : "not a");
+    	printf("%d is %s power of two.\n", num2, isPowerOfTwo(num2) ? "a" : "not a");
+    	printf("%d is %s power of two.\n", num3, isPowerOfTwo(num3) ? "a" : "not a");
+	printf("\n");
+
+	/*Swapping two values without using a temporary variable*/
+	printf("Before swap: num_one = %d, num_two = %d\n", num_one, num_two);
+	printf("\n");
+
+	swapWithoutTemp(&num_one, &num_two);
+	printf("After swap: num_one = %d, num_two = %d\n", num_one, num_two);
+	printf("\n");
+
+	/*Finding the most significant bit (MSB)*/
+	printf("MSB position of %d: %d\n", num_1, findMSBPosition(num_1));
+    	printf("MSB position of %d: %d\n", num_2, findMSBPosition(num_2));
+    	printf("MSB position of %d: %d\n", num_3, findMSBPosition(num_3));
+	printf("\n");
+
+	/*Extracting the lowest set bit*/
+	printf("Lowest set bit position of %d: %d\n", no_1, extractLowestSetBit(no_1));
+    	printf("Lowest set bit position of %d: %d\n", no_2, extractLowestSetBit(no_2));
+    	printf("Lowest set bit position of %d: %d\n", no_3, extractLowestSetBit(no_3));
 
 
     	return (0);
