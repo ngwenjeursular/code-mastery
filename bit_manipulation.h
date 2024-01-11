@@ -22,5 +22,11 @@ unsigned int leftRotate(unsigned int value, int n);
 unsigned int rightRotate(unsigned int value, int n);
 unsigned int hashFunction(unsigned int key);
 unsigned int configurePinAsOutput(unsigned int configRegister, int pinNumber);
+unsigned int setBit(unsigned int num, int pos);
+void printBinary(unsigned int num);
+unsigned int clearBit(unsigned int num, int pos);
+unsigned int toggleBit(unsigned int num, int pos);
+int isBitSet(unsigned int num, int pos);
+int countSetBits(unsigned int num);
 
 #endif /*BIT_MANIPULATION_H*/

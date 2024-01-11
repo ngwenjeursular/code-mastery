@@ -60,6 +60,18 @@ use this to compile your code:
 use this to compile your code:
 `gcc -Wall -Wextra -Werror -pedantic practice_file_1.c practice_file_2.c main.c -o 2-practice`
 
+## Day 8: Bitwise Tricks and Techniques
+
+(11/01/2024)
+- **Morning:**
+  - Explored common tricks and techniques using bitwise operations.
+  - Applied bitwise tricks to solve coding challenges.
+- **Afternoon:**
+  - Investigated efficient ways to check for parity, find the most significant bit, etc.
+  - Enhanced previous solutions with improved error detection using bitwise operations.
+
+Use this to compile your code:
+`gcc -Wall -Wextra -Werror -pedantic practice_file_3.c bitwise_tricks.c -o 3-practice`
 ## Twitter Updates
 
 Follow my journey on Twitter [@grey_jacki3](https://x.com/grey_jacki3?t=ERZ2TKae4lhBI_4l8c8b5Q&s=09) and join the conversation using the hashtags #CodeMasteryChallenge #31daysofdiscipline #CProgramming #BitManipulation.
