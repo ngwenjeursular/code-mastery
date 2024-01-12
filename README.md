@@ -72,6 +72,19 @@ use this to compile your code:
 
 Use this to compile your code:
 `gcc -Wall -Wextra -Werror -pedantic practice_file_3.c bitwise_tricks.c -o 3-practice`
+
+## Day 9: Bitwise Manipulation in Algorithms
+
+(12/01/2024)
+- **Morning:**
+  - Studied how bit manipulation is used in various algorithms.
+  - Explored applications in data structures like bitsets and Bloom filters.
+- **Afternoon:**
+  - Implemented algorithms that heavily rely on bit manipulation.
+  - Applied bit manipulation techniques to optimize existing code.
+
+Use this to compile your code:
+`gcc -Wall -Werror -pedantic practice_file_4.c manipulation_in_algorithms.c -o 4-practice`
 ## Twitter Updates
 
 Follow my journey on Twitter [@grey_jacki3](https://x.com/grey_jacki3?t=ERZ2TKae4lhBI_4l8c8b5Q&s=09) and join the conversation using the hashtags #CodeMasteryChallenge #31daysofdiscipline #CProgramming #BitManipulation.

@@ -36,4 +36,13 @@ int hasPermission(unsigned int userPermissions, unsigned int permissionToCheck);
 void grantPermission(unsigned int *userPermissions, unsigned int permissionToAdd);
 void revokePermission(unsigned int *userPermissions, unsigned int permissionToRemove);
 
+/*Bitwise manipulation in algorithms*/
+int findSingleNonRepeated(int arr[], int size);
+int countSetBits2(unsigned char pixel);
+void processImage(unsigned char image[], int size);
+
+void generatePowerSet(int set[], int setSize);
+unsigned int decimalToGray(unsigned int num);
+void printBinary2(unsigned int num, int bits);
+
 #endif /*BIT_MANIPULATION_H*/
