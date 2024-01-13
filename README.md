@@ -85,6 +85,17 @@ Use this to compile your code:
 
 Use this to compile your code:
 `gcc -Wall -Werror -pedantic practice_file_4.c manipulation_in_algorithms.c -o 4-practice`
+
+## Day 10: Advanced Topics and Bit Hacks
+
+(13/01/2024)
+- **Morning:**
+  - Explored advanced topics such as bit hacking techniques.
+  - Studied famous bit manipulation hacks and their applications.
+- **Afternoon:**
+  - Solved complex coding challenges that require advanced bit manipulation skills.
+  - Applied bit hacks to optimize solutions.
+
 ## Twitter Updates
 
 Follow my journey on Twitter [@grey_jacki3](https://x.com/grey_jacki3?t=ERZ2TKae4lhBI_4l8c8b5Q&s=09) and join the conversation using the hashtags #CodeMasteryChallenge #31daysofdiscipline #CProgramming #BitManipulation.

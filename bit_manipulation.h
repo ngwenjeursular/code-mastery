@@ -45,4 +45,11 @@ void generatePowerSet(int set[], int setSize);
 unsigned int decimalToGray(unsigned int num);
 void printBinary2(unsigned int num, int bits);
 
+
+/*Advanced bit hacks*/
+int countTrailingZeros(unsigned int num);
+int logBase2(unsigned int num);
+unsigned int reverseBits(unsigned int num);
+int countSetBitsSparse(unsigned int num);
+
 #endif /*BIT_MANIPULATION_H*/
