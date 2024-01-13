@@ -1,0 +1,27 @@
+/**
+ * gitignore - Ignore specific files and executables
+ */
+
+/*
+ * Ignore Vim swap files
+ */
+*.swp
+
+/*
+ * Ignore Vim session files
+ */
+*.swo
+
+/*
+ * Ignore specific practice files
+ */
+1-practice
+2-practice
+3-practice
+4-practice
+
+/*
+ * Ignore compiled executables
+ */
+*.out
+*.exe
